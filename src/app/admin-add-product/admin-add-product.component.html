@@ -1,0 +1,38 @@
+<div class="container text-center">
+    <form>
+      <img class="mb-4" src="assets/images/ct.png" alt="" width="72" height="57">
+      <h1 class="h3 mb-3 fw-normal">Add New Product</h1>
+  
+      <div class="form-floating">
+        <input type="text" class="form-control" id="name" [(ngModel)]= "product.name" name="name" placeholder="Product Name"
+         />
+        <label for="name">Product Name</label>
+      </div>
+      <div class="form-floating">
+        <input type="number" class="form-control" id="price" [(ngModel)]= "product.price" name="price" placeholder="Product Price"
+         />
+        <label for="price">Product Price</label>
+      </div>
+      <div class="form-floating">
+        <input type="text" class="form-control" id="imageUrl" name="imageUrl" [(ngModel)]= "product.imageUrl" placeholder="Product Image URL"
+         />
+        <label for="imageUrl">Product Image URL</label>
+      </div>
+      <div class="form-floating">
+        <input type="text" class="form-control" id="description" name="description" [(ngModel)]= "product.description" placeholder="Product Description"
+         />
+        <label for="description">Product Description</label>
+      </div>
+      <div class="form-floating">
+        <input type="number" class="form-control" id="quantity" name="quantity" [(ngModel)]= "product.quantity" placeholder="Product Quantity"
+         />
+        <label for="quantity">Product Quantity</label>
+      </div>
+      <div class="form-floating">
+        <input type="text" class="form-control" id="category" name="category" [(ngModel)]= "product.category" placeholder="Product Category"/>
+        <label for="category">Product Category</label>
+      </div>
+      <br />
+      <a href="#" class="w-100 btn btn-lg btn-secondary"  type="submit" (click)="addProduct()">Add New Product</a>
+    </form>
+  </div>

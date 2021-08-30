@@ -1,0 +1,37 @@
+<h2>Products</h2>
+<br />
+<a routerLink='/add-product' class="btn btn-secondary">Add New Product</a>
+<br /><br />
+<table class="table table-hover table-striped">
+    <thead>
+        <tr>
+            <!--<th>Id</th> -->
+            <th>ID</th>
+            <th>Name</th>
+            <th>Brand</th>
+            <th>Price</th>
+            <th>Quantity</th>
+            <th>Description</th>
+            <th>Category</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        
+        <tr *ngFor="let product of productList">
+          <!-- <td>{{i+1}}</td> =-->
+            <td>{{ product._id }}</td>
+            <td>{{ product.name }}</td>
+            <td>{{ product.brand }}</td>
+            <td>{{ product.price }}</td>
+            <td>{{ product.quantity }}</td>
+            <td>{{ product.description }}</td>
+            <td>{{ product.category }}</td>
+            <td>
+                <a [routerLink]="['/add-product', product._id]" class="btn btn-primary">Update Product</a>|
+                <a (click)="DeleteProduct(product._id)"  class="btn btn-danger">Delete Product</a>
+            </td>
+        </tr>
+    
+    </tbody>
+</table>

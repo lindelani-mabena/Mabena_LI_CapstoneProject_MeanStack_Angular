@@ -1,0 +1,106 @@
+<nav class="py-2 bg-light border-bottom">
+  <div class="container d-flex flex-wrap">
+      <ul class="nav me-auto">
+          <li class="nav-item"><a routerLink="home" class="btn nav-link link-dark px-2 active"
+                  aria-current="page">Home</a></li>
+          <li class="nav-item"><a routerLink="about" class="btn nav-link link-dark px-2">About</a></li>
+          <li class="nav-item"><a routerLink="products" class="btn nav-link link-dark px-2">View products</a></li>
+          <li class="nav-item"><a routerLink="cart" class="btn nav-link link-dark px-2">Cart</a></li>
+          <li class="nav-item"><a routerLink="contact" class="btn nav-link link-dark px-2">Contact</a></li>
+          <li class="nav-item"><a routerLink="admin-page" class="btn nav-link link-dark px-2">Admin Dashboard</a></li> <!-- *ngIf="adminLoggedIn" -->
+          <!--<li class="nav-item"><a routerLink="update-book" *ngIf="adminLoggedIn"
+                  class="btn nav-link link-dark px-2">Update book</a></li> -->
+      </ul>
+
+      <ul class="nav">
+          <!--  <li class="nav-item" *ngIf="loggedIn!=true"><a routerLink="login" class="btn nav-link link-dark px-2"
+          (click)="btnLoginLink()">Login</a></li>
+      <li class="nav-item" *ngIf="loggedIn!=true"><a routerLink="sign-up" class="btn nav-link link-dark px-2"
+          (click)="btnSignUpLink()">Sign up</a></li>
+      <li class="nav-item" *ngIf="loggedIn==true"><a routerLink="login" class="btn nav-link link-dark px-2"
+          (click)="btnLogoutLink()">Logout</a></li> -->
+          <li class="nav-item"><a routerLink="login" class="btn nav-link link-dark px-2">Login</a>
+              <!--*ngIf="!loggedIn"-->
+          </li>
+          <li class="nav-item"><a routerLink="register" class="btn nav-link link-dark px-2">Register</a></li>
+          <!--*ngIf="!loggedIn"-->
+          <li class="nav-item"><a routerLink="update-profile" class="btn nav-link link-dark px-2">Update profile</a>
+          </li>
+          <!--*ngIf="!loggedIn"-->
+          <li class="nav-item"><a (click)="logout()" class="btn nav-link link-dark px-2">Logout</a></li>
+          <!--*ngIf="loggedIn"-->
+      </ul>
+  </div>
+</nav>
+<header class="py-3 mb-4 border-bottom">
+  <div class="container d-flex flex-wr ap justify-content-center">
+      <a href="/" class="d-flex align-items-center mb-3 mb-lg-0 me-lg-auto text-dark text-decoration-none">
+          <svg class="bi me-2" width="40" height="32">
+              <use xlink:href="#bootstrap"></use>
+          </svg>
+          <span class="fs-4">Browse n Pay</span>
+      </a>
+  </div>
+</header>
+<br />
+<br />
+<div>
+  <div class="p-5 mb-4 bg-light rounded-3">
+      <div class="container-fluid py-5">
+          <router-outlet>
+          </router-outlet>
+      </div>
+  </div>
+</div>
+<footer class="bd-footer py-5 mt-5 bg-light">
+  <div class="container py-5">
+      <div class="row">
+
+          <div class="col-lg-3 mb-6">
+              <a class="d-inline-flex align-items-center mb-2 link-dark text-decoration-none" href="/"
+                  aria-label="Bootstrap">
+                  <span class="fs-5">Browse n Pay</span>
+              </a>
+              <ul class="list-unstyled small text-muted">
+                  <li class="mb-2">This Student Online application was designed and developed by InnoCodez Full Stack
+                      developer using
+                      various software development technologies and frameworks for the Deviare/Simplilearn capstone
+                      project.</li>
+                  <li class="mb-2">This project is still under alpha development phase </li>
+                  <li class="mb-2">Currently v1.0.0.</li>
+              </ul>
+          </div>
+
+          <div class="col-6 col-lg-3 offset-lg-1 mb-6">
+              <h5>Links</h5>
+              <ul class="list-unstyled">
+                  <li class="mb-2"><a routerLink="/">Home</a></li>
+                  <li class="mb-2"><a routerLink="about">About</a></li>
+                  <li class="mb-2"><a routerLink="contact">Contact</a></li>
+              </ul>
+          </div>
+
+          <div class="col-6 col-lg-3 mb-6">
+              <h5>Communities</h5>
+              <ul class="list-unstyled">
+                  <li class="mb-2"><a href="https://stackoverflow.com/">Software Development</a></li>
+                  <li class="mb-2"><a
+                          href="https://www.dni.gov/index.php/features/2763-principles-of-artificial-intelligence-ethics-for-the-intelligence-community/">Artificial
+                          Intelligence</a></li>
+                  <li class="mb-2"><a href="https://community.ibm.com/community/user/datascience/home">Data
+                          Science</a></li>
+                  <li class="mb-2"><a
+                          href="http://www.scielo.org.za/scielo.php?script=sci_arttext&pid=S1560-683X2019000100034">Cloud
+                          Computing
+                      </a></li>
+                  <li class="mb-2"><a
+                          href="https://www.cybersecurityintelligence.com/national-cybersecurity-hub-south-africa-4637.html">Cyber
+                          Security</a></li>
+              </ul>
+          </div>
+      </div>
+  </div>
+</footer>
+
+
+

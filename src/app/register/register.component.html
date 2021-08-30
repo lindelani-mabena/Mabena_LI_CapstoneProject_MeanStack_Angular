@@ -1,0 +1,43 @@
+<div class="container text-center">
+    <form>
+      <img class="mb-4" src="assets/images/ct.png" alt="" width="72" height="57">
+      <h1 class="h3 mb-3 fw-normal">Register</h1>
+  
+      <div class="form-floating">
+        <input type="text" class="form-control" id="firstName" [(ngModel)]="user.fullName" name="firstName" placeholder="First Name"
+         />
+        <label for="firstName">First Name</label>
+      </div>
+      <div class="form-floating">
+        <input type="text" class="form-control" id="username" [(ngModel)]="user.username" name="lastName" placeholder="Username"
+         />
+        <label for="username">Username</label>
+      </div>
+      <div class="form-floating">
+        <input type="email" class="form-control" id="email" name="email" [(ngModel)]="user.email" placeholder="name@example.com"
+         />
+        <label for="email">Email Address</label>
+      </div>
+      <div class="form-floating">
+        <input type="number" class="form-control" id="phoneNumber" name="phoneNumber" [(ngModel)]="user.phoneNumber" placeholder="0712345678"
+         />
+        <label for="phoneNumber">Phone Number</label>
+      </div>
+      <div class="form-floating">
+        <input type="password" class="form-control" id="password" name="password" [(ngModel)]="user.password" placeholder="password"
+         />
+        <label for="password">Password</label>
+      </div>
+      <div class="form-floating">
+        <input type="password" class="form-control" id="confirmPassword" [(ngModel)]="user.confirmPassword" name="confirmPassword" placeholder="Confirm Password"/>
+        <label for="confirmPassword">Confirm Password</label>
+      </div>
+      <div>
+        <br/>
+      <a class="w-100 btn btn-lg btn-succcess" (click)="register()">Sign up</a>
+      <a class="w-100 btn btn-lg btn-danger"  type="reset" >Sign up</a>
+      </div>
+
+      
+    </form>
+  </div>
